@@ -7,7 +7,7 @@ export default function MazeGrid({ width = 10, height = 10 }) {
 
   useEffect(() => {
     generateMaze(width, height);
-  }, []);
+  }, [width, height]);
 
   // [1, 0] --- '1,0'
   function bfs(startNode) {
@@ -211,7 +211,7 @@ export default function MazeGrid({ width = 10, height = 10 }) {
       </div>
       <div className={"maze"}>
         {maze.map((row, rowIndex) => (
-          <div className="row">
+          <div className="row" key={rowIndex}>
             {row.map((cell, cellIndex) => (
               <div className={`cell ${cell}`} key={cellIndex}></div>
             ))}
