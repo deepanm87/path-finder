@@ -6,8 +6,14 @@
     height: 100vh;
 }
 
+.controls {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
 .maze-button {
-    background-color: rgb(87, 87, 211);
+    background-color: #0091ff;
     margin: 10px;
     color: white;
     cursor: pointer;
@@ -39,6 +45,10 @@
 
 .cell.wall {
     background-color: black;
+}
+
+.cell.visited {
+    background-color: lightblue;
 }
 
 .cell.path {
